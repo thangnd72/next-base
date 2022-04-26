@@ -1,6 +1,8 @@
 import { Button, Checkbox, Form, Input } from 'antd'
 import { NextPage } from 'next'
 import styles from '../../public/styles/Signin.module.css'
+import Image from 'next/image'
+import backgroundPic from '../../public/images/background.png'
 const SignIn: NextPage = () => {
   const onFinish = (values: any) => {
     console.log('Success:', values)
@@ -14,10 +16,7 @@ const SignIn: NextPage = () => {
     <div className={styles.loginPage}>
       <div className={styles.loginBox}>
         <div className={styles.illustrationWrapper}>
-          <img
-            src="https://mixkit.imgix.net/art/preview/mixkit-left-handed-man-sitting-at-a-table-writing-in-a-notebook-27-original-large.png?q=80&auto=format%2Ccompress&h=700"
-            alt="Login"
-          />
+          <Image src={backgroundPic} alt="Login" width={600} height={600} priority />
         </div>
         <Form
           name="basic"
